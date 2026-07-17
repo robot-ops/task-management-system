@@ -1,0 +1,9 @@
+$kind: http-request
+name: Update Task Endpoint
+description: ""
+url: http://localhost:5000/api/tasks/1
+method: PUT
+body:
+  type: json
+  content: ""
+order: 4272827900708295

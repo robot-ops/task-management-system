@@ -1,0 +1,17 @@
+$kind: http-request
+name: Register Endpoint
+description: ""
+url: http://localhost:5000/api/auth/register
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\": \"abay\",\r
+
+    \    \"email\" : \"abay@gmail.com\",\r
+
+    \    \"password\" : \"12345\"\r
+
+    }"
+order: 1784317523985

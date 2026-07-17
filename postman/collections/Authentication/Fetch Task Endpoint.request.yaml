@@ -1,0 +1,23 @@
+$kind: http-request
+name: Fetch Task Endpoint
+description: ""
+url: http://localhost:5000/api/tasks/
+method: GET
+body:
+  type: json
+  content: "{\r
+
+    \    \"title\" : \"test-case\",\r
+
+    \    \"description\" : \"test case\",\r
+
+    \    \"status\" : \"done\",\r
+
+    \    \"deadline\" : \"2026-07-18\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhYmF5QGdtYWlsLmNvbSIsImlhdCI6MTc4NDMyMTg2NSwiZXhwIjoxNzg0MzI1NDY1fQ.OCnlXjcnZdNGxtGduWBW7zwjy0q9Mp1Sn4YPjZFcXLc
+order: 3411693419762173

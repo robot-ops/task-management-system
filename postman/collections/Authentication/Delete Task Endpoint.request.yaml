@@ -1,0 +1,6 @@
+$kind: http-request
+name: Delete Task Endpoint
+description: ""
+url: http://localhost:5000/api/tasks/1
+method: DELETE
+order: 4457342926620728

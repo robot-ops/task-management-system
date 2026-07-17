@@ -1,5 +1,9 @@
+# Dependencies
 **/node_modules/
+**/dist/
+**/dist-ssr/
+**/.next/
+**/build/
 **/.env
 *.log
-*.postman
-postman
+npm-debug.log*

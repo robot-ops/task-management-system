@@ -1,0 +1,9 @@
+$kind: http-request
+name: Create Task Endpoint
+description: ""
+url: http://localhost:5000/api/tasks/
+method: POST
+body:
+  type: json
+  content: ""
+order: 3932015619937986
