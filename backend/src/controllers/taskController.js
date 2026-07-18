@@ -101,19 +101,20 @@ const updateTask = async (req, res) => {
 const deleteTask = async (req, res) => {
     const userId = req.user.id;
     const taskId = req.params.id;
-    
+
     try {
-        const [task] = await taskModel.deleteTask(userId, taskId);
-        if(task.length === 0) {
+        const [existingTask] = await taskModel.getTasksByUserId(userId, taskId);
+        if (existingTask.length === 0) {
             return res.status(404).json({
-                "message": "Task not found"
-            })
-        } else {
-            await taskModel.deleteTask(userId, taskId)
-            return res.status(200).json({
-                "message": "Task deleted"
-            })
+                "message": "Task not found or unauthorized"
+            });
         }
+        
+        await taskModel.deleteTask(taskId, userId);
+        
+        return res.status(200).json({
+            "message": "Task deleted successfully"
+        });
     } catch (error) {
         console.error("Error deleting task:", error);
         res.status(500).json({ message: "Internal server error" });

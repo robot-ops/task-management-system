@@ -33,10 +33,10 @@ const updateTask = (taskId, taskData, userId) => {
     return dbPool.execute(sqlQuery, values);
 };
 
-const deleteTask = (taskId, userId) => {
+const deleteTask = (userId, taskId) => {
     const sqlQuery = "DELETE FROM tasks_table WHERE id = ? AND user_id = ?";
 
-    return dbPool.execute(sqlQuery, [taskId, userId]);
+    return dbPool.execute(sqlQuery, [userId, taskId]);
 };
 
 module.exports = {
